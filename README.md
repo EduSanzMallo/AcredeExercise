@@ -29,3 +29,14 @@ com-es (Spanish)	.miapuesta-es, .vistabet
 We value quality over quantity - this is intended to be a gauge of your development approach, so prioritise carefully.
 
 Unit test cases are mandatory.
+
+Solution
+========
+This exercise is to create a registration form and the data will save in a xml file that will be exposed by SOAP so that third-party applications can consummed it.
+- First of all, I create a domain class called User with its fields and validations.
+- I create a controller (UserController) with its CRUD operations and build its views with scaffolding. The main operation is 'create'.
+- In the create view I create a form to type the user data and save them in the memory-database.
+- I create a service to list all user instances and build xml file to exposed by SOAP with the CXF plugin.
+  To check the wsdl where the operations and attributes are exposed -> http://localhost:8080/acrede/services/user?wsdl 
+  To check the xml file generated -> http://localhost:8080/acrede/services/user/getUsers 
+
